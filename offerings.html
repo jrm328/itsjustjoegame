@@ -1,0 +1,173 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Games & Pricing — It’s Just Joe Games</title>
+    <meta name="description" content="Browse current and upcoming games, platforms, and pricing for It’s Just Joe Games." />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="images/favicon.png" />
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="banner banner--secondary" role="img" aria-label="Games & pricing banner">
+            <div class="banner-overlay">
+                <!-- <h1 class="site-title">Games & Pricing</h1>
+                <p class="site-tagline">What we’re building—and how to get it.</p> -->
+            </div>
+        </div>
+
+        <nav class="site-nav" aria-label="Primary">
+            <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
+                <span class="sr-only">Toggle menu</span>
+                ☰
+            </button>
+            <ul id="nav-menu" class="nav-list">
+                <li><a class="nav-brand" href="index.html">It’s Just Joe Games</a></li>
+                <li><a aria-current="page" href="offerings.html">Games & Pricing</a></li>
+                <li><a href="index.html#devlog">Devlog</a></li>
+                <li><a href="index.html#press">Press Kit</a></li>
+                <li><a href="index.html#contact" class="btn btn-small">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <section class="section">
+            <div class="container">
+                <h2 class="h1">Our Lineup</h2>
+                <div class="grid-3">
+                    <article id="mage-rage" class="card card-hover">
+                        <img src="images/mage-rage-card.jpg" alt="Mage Rage key art" />
+                        <div class="card-body">
+                            <h3>Mage Rage</h3>
+                            <p>Bullet-hell roguelite with punchy combat and comedic flair.</p>
+                            <div class="chip-row">
+                                <span class="chip">In Development</span>
+                                <span class="chip">PC/Steam</span>
+                            </div>
+                            <a class="btn btn-ghost" href="#">Wishlist on Steam</a>
+                        </div>
+                    </article>
+
+                    <article id="dropzone-9" class="card card-hover">
+                        <img src="images/drop-zone-9-card.jpg" alt="DropZone 9 concept art" />
+                        <div class="card-body">
+                            <h3>DropZone 9</h3>
+                            <p>AI-driven mystery micro-stories where suspects talk back.</p>
+                            <div class="chip-row">
+                                <span class="chip">Prototype</span>
+                                <span class="chip">PC (Demo)</span>
+                            </div>
+                            <a class="btn btn-ghost" href="#">Play Free Demo</a>
+                        </div>
+                    </article>
+
+                    <article id="bunker-breakout" class="card card-hover">
+                        <img src="images/bunker-breakout-card.jpg" alt="Bunker Breakout Game Art" />
+                        <div class="card-body">
+                            <h3>Bunker Breakout</h3>
+                            <p>Gritty 2.5D shooter. Fight up from the depths to save your family.</p>
+                            <div class="chip-row">
+                                <span class="chip">In Development</span>
+                                <span class="chip">PC/Steam</span>
+                            </div>
+                            <a class="btn btn-ghost" href="https://store.steampowered.com/app/2233640/Bunker_Breakout/">Wishlist on Steam</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section alt">
+            <div class="container">
+                <h2 class="h1">Pricing & Platforms</h2>
+                <!-- Border-free, responsive comparison table -->
+                <div class="table-wrap">
+                    <table class="table borderless">
+                        <caption class="sr-only">Comparison of offerings, status, price, and platforms</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Offering</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">Price*</th>
+                                <th scope="col">Platforms</th>
+                                <th scope="col">Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Mage Rage</th>
+                                <td>In Development</td>
+                                <td>$9.99 (target)</td>
+                                <td>PC (Steam)</td>
+                                <td>Early Access target: Q2 2026</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">DropZone 9</th>
+                                <td>Prototype</td>
+                                <td>$4.99 (planned)</td>
+                                <td>PC (Demo pending)</td>
+                                <td>Full release TBD; demo free</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Bunker Breakout</th>
+                                <td>Beta</td>
+                                <td>$7.99</td>
+                                <td>PC / Steam</td>
+                                <td>One-time license; updates included</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="fineprint">*Pricing is subject to change as features stabilize.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="h1">FAQ</h2>
+                <details>
+                    <summary>Will there be console versions?</summary>
+                    <p>We’re focused on PC first and will evaluate consoles based on demand and scope.</p>
+                </details>
+                <details>
+                    <summary>How can I get press assets?</summary>
+                    <p>Visit the Press Kit on the homepage for logos, key art, and factsheets.</p>
+                </details>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <strong>It’s Just Joe Games</strong><br />
+                © <span id="year"></span> All rights reserved.
+            </div>
+            <nav aria-label="Footer">
+                <ul class="footer-links">
+                    <li><a href="index.html#press">Press</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Terms</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const toggle = document.querySelector('.nav-toggle');
+    const menu = document.getElementById('nav-menu');
+    if (toggle && menu) {
+      toggle.addEventListener('click', () => {
+        const open = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!open));
+        menu.classList.toggle('open');
+      });
+    }
+    </script>
+</body>
+</html>
