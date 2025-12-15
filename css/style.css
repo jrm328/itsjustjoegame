@@ -59,7 +59,7 @@ a {
    Layout Utilities
    ========================= */
 .container {
-    width: min(1100px, 92vw);
+    width: min(1400px, 92vw);
     margin-inline: auto;
 }
 
@@ -73,7 +73,7 @@ a {
 
 .grid-2 {
     display: grid;
-    gap: 1.5rem;
+    gap: 1rem;
     grid-template-columns: 1.2fr .8fr;
 }
 
@@ -249,7 +249,7 @@ a {
 }
 
 .media-thumb {
-    aspect-ratio: 16/9;
+    aspect-ratio: 4/3;
     background: #0d1117;
 }
 
@@ -340,11 +340,52 @@ a {
     color: #b9c9d0;
 }
 
+/* Extra form field styles for contact page */
+.form input[type="text"],
+.form input[type="url"],
+.form select,
+.form textarea {
+    width: 100%;
+    padding: .6rem .75rem;
+    border-radius: 10px;
+    border: 1px solid #2a3647;
+    background: #0f141b;
+    color: #e9eef2;
+    margin-bottom: .75rem;
+    font: inherit;
+}
+
+/* Make the email field consistent with others (optional, but nice) */
+.form input[type="email"] {
+    width: 100%;
+    padding: .6rem .75rem;
+    border-radius: 10px;
+    border: 1px solid #2a3647;
+    background: #0f141b;
+    color: #e9eef2;
+    margin-bottom: .75rem;
+    font: inherit;
+}
+
+/* Validation feedback using HTML5 :valid/:invalid */
+.form input:required:invalid,
+.form select:required:invalid,
+.form textarea:required:invalid {
+    border-color: #ff7f7f;
+}
+
+.form input:required:valid,
+.form select:required:valid,
+.form textarea:required:valid {
+    border-color: #3bbf85;
+}
+
 /* =========================
    Tables (border-free responsive)
    ========================= */
 .table-wrap {
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* smoother touch scroll */
 }
 
 .table {
@@ -354,7 +395,8 @@ a {
     min-width: 640px;
 }
 
-    .table th, .table td {
+    .table th,
+    .table td {
         text-align: left;
         padding: .8rem 1rem;
     }
@@ -364,7 +406,8 @@ a {
         color: #cfe7ee;
     }
 
-    .table.borderless th, .table.borderless td {
+    .table.borderless th,
+    .table.borderless td {
         border: none;
     }
 
@@ -379,6 +422,71 @@ a {
 .fineprint {
     color: #b9c9d0;
     font-size: .9rem;
+}
+
+/* ============================================
+   Mobile stacked layout for Pricing & Platforms
+   ============================================ */
+@media (max-width: 600px) {
+    .table-wrap {
+        overflow-x: visible;
+    }
+
+    .table {
+        border: 0;
+        min-width: 0;
+        font-size: 0.9rem;
+    }
+
+        /* Hide table header visually but keep it for screen readers */
+        .table thead {
+            border: 0;
+            clip: rect(0 0 0 0);
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px;
+        }
+
+        .table tbody tr {
+            display: block;
+            border: 1px solid #232b36;
+            border-radius: 12px;
+            background: #161b22;
+            margin-bottom: 1rem;
+        }
+
+        .table th[scope="row"],
+        .table td {
+            display: block;
+            padding: 0.5rem 1rem;
+            text-align: left;
+        }
+
+        .table th[scope="row"] {
+            font-size: 1rem;
+            font-weight: 700;
+            border-bottom: 1px solid #232b36;
+            margin-bottom: 0.25rem;
+        }
+
+        .table td {
+            position: relative;
+            padding-left: 7rem; /* for label */
+        }
+
+            .table td::before {
+                content: attr(data-label);
+                position: absolute;
+                left: 1rem;
+                top: 0.5rem;
+                font-weight: 600;
+                color: #cfe7ee;
+                font-size: 0.75rem;
+                opacity: 0.85;
+            }
 }
 
 /* =========================

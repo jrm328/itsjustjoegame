@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Devlog — It’s Just Joe Games</title>
+  <meta name="description" content="Development log for It’s Just Joe Games: progress updates, notes, and milestones." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="images/favicon.png" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="banner banner--secondary" role="img" aria-label="Devlog banner">
+      <div class="banner-overlay">
+        <h1 class="site-title">Devlog</h1>
+        <p class="site-tagline">Small updates. Real progress. No fluff.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="offerings.html">See the Games</a>
+          <a class="btn btn-ghost" href="press.html">Press Kit</a>
+        </div>
+      </div>
+    </div>
+
+    <nav class="site-nav" aria-label="Primary">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
+        <span class="sr-only">Toggle menu</span>
+        ☰
+      </button>
+      <ul id="nav-menu" class="nav-list">
+    <li><a class="nav-brand" href="index.html">It’s Just Joe Games</a></li>
+    <li><a href="offerings.html">Games & Pricing</a></li>
+    <li><a aria-current="page" href="devlog.html">Devlog</a></li>
+    <li><a href="press.html">Press Kit</a></li>
+    <li><a href="contact.html">Contact</a></li>
+</ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="section">
+      <div class="container">
+        <h2 class="h1">Latest posts</h2>
+        <div class="grid-3">
+          <article class="card article" id="post-combat-feel">
+            <h3>Combat feel pass</h3>
+            <p class="fineprint">Posted: November 2025</p>
+            <p>Tuning knockback, i-frames, hit-stop, and readable VFX to make moment-to-moment gameplay feel tight.</p>
+            <details>
+              <summary>What changed</summary>
+              <ul>
+                <li>Adjusted damage windows and invulnerability frames</li>
+                <li>Improved readability: brighter impact flashes and clearer enemy tells</li>
+                <li>Added small camera shake (respecting reduced-motion preferences)</li>
+              </ul>
+            </details>
+          </article>
+
+          <article class="card article" id="post-ai-suspects">
+            <h3>AI suspects that argue</h3>
+            <p class="fineprint">Posted: November 2025</p>
+            <p>Prompt scaffolds, contradiction checks, and guardrails so suspect dialogue stays fun and coherent.</p>
+            <details>
+              <summary>Notes</summary>
+              <p>Goal: keep conversations surprising without letting the story drift or contradict known facts.</p>
+            </details>
+          </article>
+
+          <article class="card article" id="post-clip-speedups">
+            <h3>Clip finder speedups</h3>
+            <p class="fineprint">Posted: October 2025</p>
+            <p>Batching OCR + caching results to reduce repeated work and keep the workflow snappy.</p>
+            <details>
+              <summary>Results</summary>
+              <p>Fewer stalls, more predictable processing, and better throughput on long sessions.</p>
+            </details>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container grid-2">
+        <article class="card studio">
+          <h3>How to follow along</h3>
+          <p>For major milestones, subscribe on the homepage or follow the social links below.</p>
+          <ul class="inline-icons" aria-label="Social links">
+            <li><a href="https://www.youtube.com/@ItsJustJoeGames" aria-label="YouTube">YouTube</a></li>
+            <li><a href="https://x.com/ItsJustJoeGames" aria-label="Twitter">Twitter/X</a></li>
+            <li><a href="https://store.steampowered.com/search/?publisher=ItsJustJoeGames" aria-label="Steam">Steam</a></li>
+          </ul>
+        </article>
+
+        <aside class="card studio">
+          <h3>Want an update covered?</h3>
+          <p>Press and creators can use the assets on the Press Kit page.</p>
+          <a class="btn btn-primary" href="press.html">Open Press Kit</a>
+          <p class="fineprint">Or email <a href="mailto:info@itsjustjoe.games">info@itsjustjoe.games</a>.</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>It’s Just Joe Games</strong><br />
+        © <span id="year"></span> All rights reserved.
+      </div>
+      <nav aria-label="Footer">
+        <ul class="footer-links">
+          <li><a href="press.html">Press</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const toggle = document.querySelector('.nav-toggle');
+  const menu = document.getElementById('nav-menu');
+  if (toggle && menu) {
+    toggle.addEventListener('click', () => {
+      const open = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!open));
+      menu.classList.toggle('open');
+    });
+  }
+  </script>
+</body>
+</html>

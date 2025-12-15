@@ -1,0 +1,166 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact — It’s Just Joe Games</title>
+    <meta name="description" content="Contact It’s Just Joe Games for press, partnerships, and player feedback." />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="images/favicon.png" />
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="banner banner--secondary" role="img" aria-label="Contact It’s Just Joe Games">
+            <div class="banner-overlay">
+                <!-- Optional headline over banner -->
+                <h1 class="site-title">Contact</h1>
+                <p class="site-tagline">Press, partnerships, and player feedback.</p>
+            </div>
+        </div>
+
+        <nav class="site-nav" aria-label="Primary">
+            <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
+                <span class="sr-only">Toggle menu</span>
+                ☰
+            </button>
+            <ul id="nav-menu" class="nav-list">
+                <li><a class="nav-brand" href="index.html">It’s Just Joe Games</a></li>
+                <li><a href="offerings.html">Games & Pricing</a></li>
+                <li><a href="devlog.html">Devlog</a></li>
+                <li><a href="press.html">Press Kit</a></li>
+                <li><a aria-current="page" href="contact.html" class="btn btn-small">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <section class="section">
+            <div class="container grid-2">
+                <div>
+                    <h1 class="h1">Get in touch</h1>
+                    <p>
+                        Use this form for press inquiries, collaboration ideas, player feedback,
+                        or anything else related to <span class="accent">It’s Just Joe Games</span>.
+                    </p>
+                    <p>
+                        You can also email us directly at
+                        <a href="mailto:info@itsjustjoe.games">info@itsjustjoe.games</a>.
+                    </p>
+                </div>
+
+                <form class="card form" method="post" action="#" aria-label="Contact form">
+                    <!-- The novalidate attribute is a boolean
+                    and should not have a value. -->
+
+                    <h2 class="h1">Contact form</h2>
+
+                    <!-- Name -->
+                    <label for="name">Name<span aria-hidden="true"> *</span></label>
+                    <input id="name"
+                           name="name"
+                           type="text"
+                           required
+                           minlength="2"
+                           maxlength="80"
+                           autocomplete="name"
+                           placeholder="Your name" />
+
+                    <!-- Email -->
+                    <label for="email">Email<span aria-hidden="true"> *</span></label>
+                    <input id="email"
+                           name="email"
+                           type="email"
+                           required
+                           autocomplete="email"
+                           placeholder="you@example.com" />
+
+                    <!-- Reason -->
+                    <label for="reason">Reason for contact<span aria-hidden="true"> *</span></label>
+                    <select id="reason" name="reason" required>
+                        <option value="" disabled selected>Select one…</option>
+                        <option value="press">Press / media</option>
+                        <option value="partnership">Partnership / sponsorship</option>
+                        <option value="player-feedback">Player feedback</option>
+                        <option value="bug-report">Bug report / technical issue</option>
+                        <option value="other">Other</option>
+                    </select>
+
+                    <!-- Game (optional) -->
+                    <label for="game">Which game is this about? (optional)</label>
+                    <select id="game" name="game">
+                        <option value="">Not specific to a game</option>
+                        <option value="mage-rage">Mage Rage</option>
+                        <option value="dropzone-9">DropZone 9</option>
+                        <option value="bunker-breakout">Bunker Breakout</option>
+                    </select>
+
+                    <!-- Channel/portfolio URL -->
+                    <label for="link">Channel / portfolio URL (optional)</label>
+                    <input id="link"
+                           name="link"
+                           type="url"
+                           inputmode="url"
+                           placeholder="https://twitch.tv/YourChannel" />
+
+                    <!-- Message -->
+                    <label for="message">Message<span aria-hidden="true"> *</span></label>
+                    <textarea id="message"
+                              name="message"
+                              rows="5"
+                              required
+                              minlength="20"
+                              maxlength="1000"
+                              placeholder="Tell us what’s up. The more detail, the better."></textarea>
+
+                    <!-- Consent -->
+                    <div>
+                        <input id="consent"
+                               name="consent"
+                               type="checkbox"
+                               required />
+                        <label for="consent">
+                            I agree that It’s Just Joe Games may use this information to contact me about my inquiry.
+                        </label>
+                    </div>
+
+                    <button class="btn btn-primary" type="submit">Send message</button>
+                    <p class="form-fineprint">
+                        Required fields are marked with an asterisk (*). Your details will only be used to
+                        respond to this message.
+                    </p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <strong>It’s Just Joe Games</strong><br />
+                © <span id="year"></span> All rights reserved.
+            </div>
+            <nav aria-label="Footer">
+                <ul class="footer-links">
+                    <li><a href="press.html">Press</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <script>// small progressive enhancement for the mobile nav and year
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const toggle = document.querySelector('.nav-toggle');
+    const menu = document.getElementById('nav-menu');
+    if (toggle && menu) {
+      toggle.addEventListener('click', () => {
+        const open = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!open));
+        menu.classList.toggle('open');
+      });
+    }</script>
+</body>
+</html>

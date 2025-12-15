@@ -13,14 +13,12 @@
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header">
-        <div class="banner" role="img" aria-label="Studio banner">
+        <div class="banner banner--secondary" role="img" aria-label="Studio banner">
             <div class="banner-overlay">
-                <!-- Activate later once rework banner image -->
-                <!--<h1 class="site-title">It’s Just Joe Games</h1>
-    <p class="site-tagline">Cinematic indie games, built with heart.</p>
+                <h1 class="site-title">It’s Just Joe Games</h1>
+                <p class="site-tagline">Cinematic indie games, built with heart.</p>
                 <div class="cta-row">
-                    <a class="btn btn-primary" href="#featured">Watch Trailer</a>
-                    <a class="btn btn-ghost" href="offerings.html">Explore Games</a> -->
+                    <a class="btn btn-primary" href="offerings.html">Explore Games</a>
                 </div>
             </div>
         </div>
@@ -33,9 +31,9 @@
             <ul id="nav-menu" class="nav-list">
                 <li><a class="nav-brand" href="index.html">It’s Just Joe Games</a></li>
                 <li><a href="offerings.html">Games & Pricing</a></li>
-                <li><a href="#devlog">Devlog</a></li>
-                <li><a href="#press">Press Kit</a></li>
-                <li><a href="#contact" class="btn btn-small">Contact</a></li>
+                <li><a href="devlog.html">Devlog</a></li>
+                <li><a href="press.html">Press Kit</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -114,17 +112,17 @@
                     <article class="card article">
                         <h3>Combat feel pass</h3>
                         <p>Tuning knockback, i-frames, and readable VFX.</p>
-                        <a class="text-link" href="#">Read →</a>
+                        <a class="text-link" href="devlog.html">Read →</a>
                     </article>
                     <article class="card article">
                         <h3>AI suspects that argue</h3>
                         <p>Prompt scaffolds and contradiction checks in Chatty Clue.</p>
-                        <a class="text-link" href="#">Read →</a>
+                        <a class="text-link" href="devlog.html">Read →</a>
                     </article>
                     <article class="card article">
                         <h3>Clip finder speedups</h3>
                         <p>OCR batching + caching for Skate Clip Pro.</p>
-                        <a class="text-link" href="#">Read →</a>
+                        <a class="text-link" href="devlog.html">Read →</a>
                     </article>
                 </div>
             </div>
@@ -134,7 +132,7 @@
             <div class="container">
                 <h2 class="h1">Press Kit</h2>
                 <p>Logos, key art, trailers, factsheets—all in one place.</p>
-                <a class="btn btn-primary" href="#">Open Press Kit</a>
+                <a class="btn btn-primary" href="press.html">Open Press Kit</a>
             </div>
         </section>
 
@@ -144,7 +142,8 @@
                     <h2 class="h1">Contact</h2>
                     <p>Press & partnerships: <a href="mailto:info@itsjustjoe.games">info@itsjustjoe.games</a></p>
                 </div>
-                <form class="card form" aria-label="Newsletter signup" id="newsletter">
+                <form class="card form" aria-label="Newsletter signup" id="newsletter" method="post" action="#">
+                    <!-- This form element has no action or method attributes. -->
                     <h3>Get major updates</h3>
                     <label for="email">Email</label>
                     <input id="email" name="email" type="email" placeholder="you@example.com" required />
@@ -163,16 +162,15 @@
             </div>
             <nav aria-label="Footer">
                 <ul class="footer-links">
-                    <li><a href="#press">Press</a></li>
-                    <li><a href="#">Privacy</a></li>
-                    <li><a href="#">Terms</a></li>
+                    <li><a href="press.html">Press</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
                 </ul>
             </nav>
         </div>
     </footer>
 
-    <script>
-    // small progressive enhancement for the mobile nav and year
+    <script>// small progressive enhancement for the mobile nav and year
     document.getElementById('year').textContent = new Date().getFullYear();
     const toggle = document.querySelector('.nav-toggle');
     const menu = document.getElementById('nav-menu');
@@ -182,7 +180,6 @@
         toggle.setAttribute('aria-expanded', String(!open));
         menu.classList.toggle('open');
       });
-    }
-    </script>
+    }</script>
 </body>
 </html>

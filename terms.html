@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Terms of Service — It’s Just Joe Games</title>
+    <meta name="description" content="Terms of Service for It’s Just Joe Games." />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="images/favicon.png" />
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    
+    <header class="site-header">
+        <div class="banner banner--secondary" role="img" aria-label="Terms of Service banner">
+            <div class="banner-overlay">
+                <h1 class="site-title">Terms of Service</h1>
+                <p class="site-tagline">The rules for using this site.</p>
+            </div>
+        </div>
+<nav class="site-nav" aria-label="Primary">
+            <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
+                <span class="sr-only">Toggle menu</span>
+                ☰
+            </button>
+
+            <ul id="nav-menu" class="nav-list">
+    <li><a class="nav-brand" href="index.html">It’s Just Joe Games</a></li>
+    <li><a href="offerings.html">Games & Pricing</a></li>
+    <li><a href="devlog.html">Devlog</a></li>
+    <li><a href="press.html">Press Kit</a></li>
+    <li><a href="contact.html">Contact</a></li>
+</ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <section class="section">
+            <div class="container">
+                <h1 class="h1">Terms of Service</h1>
+                <p>Last updated: November 2025</p>
+
+                <p>
+                    By using the It’s Just Joe Games website (“the Site”) you agree to the following Terms of Service.
+                </p>
+
+                <h2>Use of the Site</h2>
+                <p>
+                    You agree to use the Site only for lawful purposes and in a way that does not
+                    infringe on the rights of others or restrict their use of the Site.
+                </p>
+
+                <h2>Intellectual Property</h2>
+                <ul>
+                    <li>All content, branding, images, and game materials are owned by It’s Just Joe Games.</li>
+                    <li>You may use press assets for coverage, reviews, streaming, and commentary.</li>
+                    <li>You may not claim ownership or redistribute our games or code.</li>
+                </ul>
+
+                <h2>Links to Third-Party Sites</h2>
+                <p>
+                    The Site may link to third-party services such as YouTube, Steam, or social media.
+                    We are not responsible for the content or policies of those platforms.
+                </p>
+
+                <h2>Limitation of Liability</h2>
+                <p>
+                    The Site is provided “as is” without warranties of any kind. We are not liable
+                    for any damages resulting from the use of the Site or from downloaded assets.
+                </p>
+
+                <h2>Changes to These Terms</h2>
+                <p>
+                    We may update these Terms from time to time. If changes are made, the update
+                    date above will change accordingly.
+                </p>
+
+                <h2>Contact</h2>
+                <p>
+                    For questions about these terms, email:
+                    <a href="mailto:info@itsjustjoe.games">info@itsjustjoe.games</a>.
+                </p>
+
+                <p class="fineprint">
+                    Also see our <a href="privacy.html">Privacy Policy</a>.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <strong>It’s Just Joe Games</strong><br>
+                © <span id="year"></span> All Rights Reserved.
+            </div>
+
+            <nav aria-label="Footer">
+                <ul class="footer-links">
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const toggle=document.querySelector('.nav-toggle');
+    const menu=document.getElementById('nav-menu');
+    if(toggle && menu){
+        toggle.addEventListener('click',()=> {
+            const open=toggle.getAttribute('aria-expanded')==='true';
+            toggle.setAttribute('aria-expanded',String(!open));
+            menu.classList.toggle('open');
+        });
+    }
+    </script>
+</body>
+</html>
